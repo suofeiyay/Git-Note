@@ -24,4 +24,4 @@
 
 3.编译的文件push到线上，在*setting*页面选择 *master branch /docs folder* 
 
-，刷新的地址打开就可以访问了
+刷新的地址打开就可以访问了
