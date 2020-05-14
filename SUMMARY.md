@@ -2,14 +2,35 @@
 
 * [README](README.md)
 * Github
-    * [gitpages设置](github/gitpages.md)
-    * [git分支](github/branchs.md)
-    * [gitbook](github/gitbook.md)
-* 掘金
-    * [设计模式](juejin/设计模式.md)
-* Vue
-    * [Vue基础](Vue/Vue基础.md)
-    * [Vue插件](Vue/Vue插件.md)
-* 书籍
-    * [代码之外](books/代码之外.md)
+    * [gitpage设置](github/gitpages.md)
+    * [github分支](github/branchs.md)
+    * [gitbook教程](github/gitbook.md)
+* JavaScript基础
+    * [变量和类型](javaScript/变量和类型.md)
+    * [原型和原型链](javaScript/原型和原型链.md)
+    * [作用域和闭包](javaScript/作用域和闭包.md)
+* HTML&CSS
+    * [页面布局](htmlCss/页面布局.md)
+* 计算机基础
+    * [网络协议](ITBasic/网络协议.md)
+    * [设计模式](ITBasic/设计模式.md)
+    * [编译原理](ITBasic/编译原理.md)
+* 数据结构和算法
+    * [数据结构](strucAlgo/数据结构.md)
+    * [算法](strucAlgo/算法.md)
+* 运行环境
+    * [浏览器](codeEnv/浏览器.md)
+    * [node](codeEnv/node.md)
+* 框架&类库
+    * [vue](FrontFrame/vue.md)
+    * [TypeScript](FrontFrame/TypeScript.md)
+    * [Cordova](FrontFrame/Cordova.md)
+* 前端工程
+    * [项目构建](FrontEng/项目构建.md)
+    * [nginx](FrontEng/nginx.md)
+* 项目&业务
+    * [后端技能](FrontProject/后端技能.md)
+    * [性能优化](FrontProject/性能优化.md)
+* 图书馆
+    * [代码之外](library/代码之外.md)
 
