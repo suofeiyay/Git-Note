@@ -9,15 +9,18 @@
     * [变量和类型](javaScript/变量和类型.md)
     * [原型和原型链](javaScript/原型和原型链.md)
     * [作用域和闭包](javaScript/作用域和闭包.md)
+    * [ES6模板字符串](javaScript/templateString.md)
 * HTML&CSS
+    * [meta标签](htmlCss/meta.md)
     * [页面布局](htmlCss/页面布局.md)
+    * [滚动条](htmlCss/scrollbar.md)
 * 计算机基础
     * [网络协议](ITBasic/网络协议.md)
     * [设计模式](ITBasic/设计模式.md)
     * [编译原理](ITBasic/编译原理.md)
 * 数据结构和算法
     * [数据结构](strucAlgo/数据结构.md)
-    * [算法](strucAlgo/算法.md)
+    * [排序和检索算法](strucAlgo/排序检索.md)
 * 运行环境
     * [浏览器](codeEnv/浏览器.md)
     * [node](codeEnv/node.md)
@@ -31,6 +34,7 @@
 * 项目&业务
     * [后端技能](FrontProject/后端技能.md)
     * [性能优化](FrontProject/性能优化.md)
+    * [H5项目常见问题汇总](FrontProject/H5.md)
 * 图书馆
     * [代码之外](library/代码之外.md)
 
