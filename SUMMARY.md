@@ -15,12 +15,13 @@
     * [页面布局](htmlCss/页面布局.md)
     * [滚动条](htmlCss/scrollbar.md)
 * 计算机基础
-    * [网络协议](ITBasic/网络协议.md)
+    * [HTTP协议](ITBasic/http.md)
     * [设计模式](ITBasic/设计模式.md)
     * [编译原理](ITBasic/编译原理.md)
 * 数据结构和算法
     * [数据结构](strucAlgo/数据结构.md)
     * [排序和检索算法](strucAlgo/排序检索.md)
+    * [动态规划和贪心算法](strucAlgo/动态贪心.md)
 * 运行环境
     * [浏览器](codeEnv/浏览器.md)
     * [node](codeEnv/node.md)
