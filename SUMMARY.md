@@ -34,8 +34,9 @@
     * [nginx](FrontEng/nginx.md)
 * 项目&业务
     * [后端技能](FrontProject/后端技能.md)
-    * [性能优化](FrontProject/性能优化.md)
+    * [前端性能优化](FrontProject/性能优化.md)
     * [H5项目常见问题汇总](FrontProject/H5.md)
+    * [项目组件化](FrontProject/组件化.md)
 * 图书馆
     * [代码之外](library/代码之外.md)
 

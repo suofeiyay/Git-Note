@@ -1,5 +1,7 @@
 # Github branchs
 
+常用git操作：[链接](https://www.bootcss.com/p/git-guide/)
+
 git 新建分支
 
 *git checkout -b mdr_branch*  
