@@ -1,0 +1,983 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>排序和检索算法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="动态贪心.html" />
+    
+    
+    <link rel="prev" href="数据结构.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Github
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../github/gitpages.html">
+            
+                <a href="../github/gitpages.html">
+            
+                    
+                    gitpage设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../github/branchs.html">
+            
+                <a href="../github/branchs.html">
+            
+                    
+                    github分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../github/gitbook.html">
+            
+                <a href="../github/gitbook.html">
+            
+                    
+                    gitbook教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    JavaScript基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../javaScript/变量和类型.html">
+            
+                <a href="../javaScript/变量和类型.html">
+            
+                    
+                    变量和类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../javaScript/原型和原型链.html">
+            
+                <a href="../javaScript/原型和原型链.html">
+            
+                    
+                    原型和原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../javaScript/作用域和闭包.html">
+            
+                <a href="../javaScript/作用域和闭包.html">
+            
+                    
+                    作用域和闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../javaScript/templateString.html">
+            
+                <a href="../javaScript/templateString.html">
+            
+                    
+                    ES6模板字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    HTML&CSS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../htmlCss/meta.html">
+            
+                <a href="../htmlCss/meta.html">
+            
+                    
+                    meta标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../htmlCss/页面布局.html">
+            
+                <a href="../htmlCss/页面布局.html">
+            
+                    
+                    页面布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../htmlCss/scrollbar.html">
+            
+                <a href="../htmlCss/scrollbar.html">
+            
+                    
+                    滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    计算机基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../ITBasic/http.html">
+            
+                <a href="../ITBasic/http.html">
+            
+                    
+                    HTTP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../ITBasic/设计模式.html">
+            
+                <a href="../ITBasic/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../ITBasic/编译原理.html">
+            
+                <a href="../ITBasic/编译原理.html">
+            
+                    
+                    编译原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    数据结构和算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="数据结构.html">
+            
+                <a href="数据结构.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="排序检索.html">
+            
+                <a href="排序检索.html">
+            
+                    
+                    排序和检索算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="动态贪心.html">
+            
+                <a href="动态贪心.html">
+            
+                    
+                    动态规划和贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    运行环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../codeEnv/浏览器.html">
+            
+                <a href="../codeEnv/浏览器.html">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../codeEnv/node.html">
+            
+                <a href="../codeEnv/node.html">
+            
+                    
+                    node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    框架&类库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../FrontFrame/vue.html">
+            
+                <a href="../FrontFrame/vue.html">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../FrontFrame/TypeScript.html">
+            
+                <a href="../FrontFrame/TypeScript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../FrontFrame/Cordova.html">
+            
+                <a href="../FrontFrame/Cordova.html">
+            
+                    
+                    Cordova
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    前端工程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../FrontEng/项目构建.html">
+            
+                <a href="../FrontEng/项目构建.html">
+            
+                    
+                    项目构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../FrontEng/nginx.html">
+            
+                <a href="../FrontEng/nginx.html">
+            
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    项目&业务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../FrontProject/后端技能.html">
+            
+                <a href="../FrontProject/后端技能.html">
+            
+                    
+                    后端技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../FrontProject/性能优化.html">
+            
+                <a href="../FrontProject/性能优化.html">
+            
+                    
+                    前端性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../FrontProject/H5.html">
+            
+                <a href="../FrontProject/H5.html">
+            
+                    
+                    H5项目常见问题汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../FrontProject/组件化.html">
+            
+                <a href="../FrontProject/组件化.html">
+            
+                    
+                    项目组件化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    图书馆
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../library/代码之外.html">
+            
+                <a href="../library/代码之外.html">
+            
+                    
+                    代码之外
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >排序和检索算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6392;&#x5E8F;&#x548C;&#x68C0;&#x7D22;&#x7B97;&#x6CD5;">&#x6392;&#x5E8F;&#x548C;&#x68C0;&#x7D22;&#x7B97;&#x6CD5;</h1>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x6267;&#x884C;&#x7684;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x6392;&#x5E8F;&#x548C;&#x68C0;&#x7D22;&#x3002;</p>
+<h4 id="1&#x57FA;&#x672C;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;">1.&#x57FA;&#x672C;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;</h4>
+<h5 id="11-&#x5192;&#x6CE1;&#x6392;&#x5E8F;">1.1 &#x5192;&#x6CE1;&#x6392;&#x5E8F;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6BD4;&#x8F83;&#x76F8;&#x90BB;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5DE6;&#x5927;&#x4E8E;&#x53F3;&#x65F6;&#x4E92;&#x6362;</span>
+<span class="hljs-keyword">let</span> arr = [<span class="hljs-number">10</span>,<span class="hljs-number">8</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bubbleSort</span>(<span class="hljs-params">arr</span>)</span>{
+    <span class="hljs-keyword">let</span> i = arr.length;
+    <span class="hljs-keyword">while</span>(i&gt;<span class="hljs-number">0</span>){
+        <span class="hljs-comment">//&#x4E24;&#x4E24;&#x6BD4;&#x8F83;&#x4EA4;&#x6362;&#xFF0C;&#x4FDD;&#x8BC1;&#x6700;&#x5927;&#x7684;&#x503C;&#x4E0B;&#x6C89;&#x5230;&#x6700;&#x540E;</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j=<span class="hljs-number">0</span>;j&lt;=i<span class="hljs-number">-1</span>;j++){
+            <span class="hljs-keyword">if</span>(arr[j] &gt; arr[j+<span class="hljs-number">1</span>]){
+                <span class="hljs-keyword">let</span> temp = arr[j+<span class="hljs-number">1</span>];
+                arr[j+<span class="hljs-number">1</span>] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        i--
+    }
+}
+<span class="hljs-comment">//&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(n2)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)</span>
+</code></pre>
+<h5 id="12-&#x9009;&#x62E9;&#x6392;&#x5E8F;">1.2 &#x9009;&#x62E9;&#x6392;&#x5E8F;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x9009;&#x51FA;&#x6700;&#x5C0F;&#x7684;&#x653E;&#x5728;&#x6570;&#x7EC4;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x4F9D;&#x6B21;...</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">selectionSort</span>(<span class="hljs-params">arr</span>)</span>{
+  <span class="hljs-keyword">let</span> min,temp;
+  <span class="hljs-keyword">let</span> len = arr.length;
+  <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span>(i&lt;len<span class="hljs-number">-1</span>){
+    min = i
+    <span class="hljs-comment">//&#x627E;&#x51FA;&#x6700;&#x5C0F;&#x7684;&#x503C;</span>
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j=i+<span class="hljs-number">1</span>;j&lt;len;j++){ 
+      <span class="hljs-keyword">if</span>(arr[min] &gt; arr[j]){
+        min = j
+      }   
+    }
+    <span class="hljs-comment">//&#x5C06;&#x6700;&#x5C0F;&#x7684;&#x503C;&#x653E;&#x5728;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-keyword">let</span> temp = arr[i]
+    arr[i] = arr[min]
+    arr[min] = temp
+    i++
+  }
+}
+<span class="hljs-comment">//&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n2)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)</span>
+</code></pre>
+<h5 id="13-&#x63D2;&#x5165;&#x6392;&#x5E8F;">1.3 &#x63D2;&#x5165;&#x6392;&#x5E8F;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x4ECE;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x5F00;&#x59CB;&#xFF0C;&#x6BD4;&#x8F83;&#x5F53;&#x524D;&#x503C;&#x548C;&#x4E0A;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#x5927;&#x5C0F;&#x5982;&#x679C;&#x5927;&#x4E8E;&#xFF0C;&#x5F53;&#x524D;&#x503C;&#x5DE6;&#x79FB;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x9053;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#x6216;&#x5FAA;&#x73AF;&#x5230;&#x5DE6;&#x4FA7;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">insertionSort</span>(<span class="hljs-params">arr</span>)</span>{
+  <span class="hljs-keyword">let</span> temp,j;
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">1</span>;i&lt;arr.length;i++){
+    temp = arr[i];
+    j = i
+    <span class="hljs-keyword">while</span>(j&gt;<span class="hljs-number">0</span> &amp;&amp; arr[j<span class="hljs-number">-1</span>] &gt;= temp){
+      arr[j] = arr[j<span class="hljs-number">-1</span>]
+      j--
+    }
+    arr[j] = temp
+  }
+}
+<span class="hljs-comment">//&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n2)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)</span>
+</code></pre>
+<h5 id="14-&#x5E0C;&#x5C14;&#x6392;&#x5E8F;">1.4 &#x5E0C;&#x5C14;&#x6392;&#x5E8F;</h5>
+<p>&#x5728;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x505A;&#x4E86;&#x5F88;&#x5927;&#x7684;&#x6539;&#x5584;&#xFF0C;&#x9996;&#x5148;&#x6BD4;&#x8F83;&#x8DDD;&#x79BB;&#x8F83;&#x8FDC;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x904D;&#x5386;&#x4E4B;&#x540E;&#x5143;&#x7D20;&#x8DDD;&#x79BB;&#x51CF;&#x5C0F;&#x3002;&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x95F4;&#x9694;&#x5E8F;&#x5217;&#x6765;&#x8868;&#x793A;&#x5728;&#x6392;&#x5E8F;&#x8FC7;&#x7A0B;&#x4E2D;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x7684;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x6709;&#x591A;&#x8FDC;&#x7684;&#x95F4;&#x9694;&#x3002;&#x591A;&#x6B21;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x4F1A;&#x6253;&#x4E71;&#x5176;&#x7A33;&#x5B9A;&#x6027;&#xFF0C;&#x6240;&#x4EE5;shell&#x6392;&#x5E8F;&#x662F;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x3002;</p>
+<p>shell&#x6392;&#x5E8F;&#x7684;&#x95F4;&#x9694;&#x5E8F;&#x5217;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x52A8;&#x6001;&#x8BA1;&#x7B97;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x8BA1;&#x7B97;&#x95F4;&#x9694;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">shellSort</span>(<span class="hljs-params">arr</span>)</span>{
+  <span class="hljs-keyword">let</span> N = arr.length;
+  <span class="hljs-keyword">let</span> h = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">while</span>(h&lt;N/<span class="hljs-number">3</span>){
+    h = <span class="hljs-number">3</span>*h+<span class="hljs-number">1</span>
+  }<span class="hljs-comment">//1,4,13,40...</span>
+  <span class="hljs-keyword">while</span>(h&gt;=<span class="hljs-number">1</span>){
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=h;i&lt;N;i++){
+      <span class="hljs-keyword">let</span> j = i;
+      <span class="hljs-keyword">while</span>(j&gt;=h&amp;&amp;arr[j-h]&gt;arr[j]){
+        <span class="hljs-keyword">let</span> temp = arr[j-h]
+        arr[j-h] = arr[j]
+        arr[j] = temp
+        j -= h
+      }
+    }
+    h = (h<span class="hljs-number">-1</span>)/<span class="hljs-number">3</span>
+  }
+}
+<span class="hljs-comment">//&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n1.3-2)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)</span>
+</code></pre>
+<h5 id="15-&#x5F52;&#x5E76;&#x6392;&#x5E8F;">1.5 &#x5F52;&#x5E76;&#x6392;&#x5E8F;</h5>
+<p>&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x662F;&#x5C06;&#x6392;&#x597D;&#x7684;&#x5B50;&#x5E8F;&#x5217;&#x5408;&#x5E76;&#x6210;&#x5927;&#x7684;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#xFF0C;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x662F;&#x7A33;&#x5B9A;&#x7684;&#x6392;&#x5E8F;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x5728;JS&#x603B;&#x9012;&#x5F52;&#x6DF1;&#x5EA6;&#x592A;&#x6DF1;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x662F;&#x91C7;&#x7528;&#x975E;&#x9012;&#x5F52;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5206;&#x89E3;&#x4E3A;&#x6709;&#x5E8F;&#x5B50;&#x5E8F;&#x5217;&#xFF0C;&#x5728;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x65F6;&#x9700;&#x8981;&#x5F00;&#x8F9F;&#x65B0;&#x7684;&#x7A7A;&#x95F4;&#x4F5C;&#x4E3A;&#x4E34;&#x65F6;&#x5BB9;&#x5668;&#x3002;</p>
+<pre><code class="lang-javascript">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mergeSort</span>(<span class="hljs-params">arr</span>)</span>{
+  <span class="hljs-keyword">if</span>(arr.length&lt;<span class="hljs-number">2</span>) <span class="hljs-keyword">return</span>
+  <span class="hljs-keyword">let</span> len = arr.length;
+  <span class="hljs-keyword">let</span> step = <span class="hljs-number">1</span>;<span class="hljs-comment">//&#x6B65;&#x957F; </span>
+  <span class="hljs-keyword">let</span> left,right;
+  <span class="hljs-keyword">while</span>(step&lt;len){
+    left = <span class="hljs-number">0</span>;
+    right = step;
+    <span class="hljs-keyword">while</span>(right + step &lt;= len){
+      mergeArr(arr,left,right,step);
+      left = right + step;
+      right = left + step;
+    }
+    <span class="hljs-keyword">if</span>(right &lt; len){
+      mergeArr(arr,left,right,step);
+    }
+    step *= <span class="hljs-number">2</span>
+  }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mergeArr</span>(<span class="hljs-params">arr,left,right,step</span>)</span>{
+  <span class="hljs-comment">// &#x53F3;&#x8FB9;&#x754C;&#x68C0;&#x6D4B;</span>
+  <span class="hljs-keyword">let</span> end = right + step;
+  <span class="hljs-keyword">if</span>(right + step &gt; arr.length) {
+    end = arr.length
+  }
+  <span class="hljs-comment">//&#x5DE6;&#x53F3;&#x6570;&#x7EC4;</span>
+  <span class="hljs-keyword">let</span> leftArr = arr.slice(left,left+step);
+  leftArr.push(<span class="hljs-literal">Infinity</span>)<span class="hljs-comment">//&#x8FB9;&#x754C;</span>
+  <span class="hljs-keyword">let</span> rightArr = arr.slice(right,end);
+  rightArr.push(<span class="hljs-literal">Infinity</span>)<span class="hljs-comment">//&#x8FB9;&#x754C;</span>
+  <span class="hljs-keyword">let</span> l = <span class="hljs-number">0</span>,r = <span class="hljs-number">0</span>;<span class="hljs-comment">//&#x5DE6;&#x53F3;&#x6307;&#x9488;</span>
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=left;i&lt;end;i++){
+    <span class="hljs-keyword">if</span>(leftArr[l] &lt; rightArr[r]){
+      arr[i] = leftArr[l];
+      l++
+    }<span class="hljs-keyword">else</span>{
+      arr[i] = rightArr[r];
+      r++
+    }
+  }  
+}
+<span class="hljs-comment">//&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(nlogn)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)</span>
+</code></pre>
+<h5 id="16-&#x5FEB;&#x901F;&#x6392;&#x5E8F;">1.6 &#x5FEB;&#x901F;&#x6392;&#x5E8F;</h5>
+<p>&#x901A;&#x8FC7;&#x9012;&#x5F52;&#x5C06;&#x6570;&#x636E;&#x4F9D;&#x6B21;&#x5206;&#x89E3;&#x4E3A;&#x5305;&#x542B;&#x8F83;&#x5C0F;&#x5143;&#x7D20;&#x548C;&#x8F83;&#x5927;&#x5143;&#x7D20;&#x7684;&#x4E0D;&#x540C;&#x5B50;&#x5E8F;&#x5217;&#xFF0C;&#x5206;&#x800C;&#x6CBB;&#x4E4B;&#x3002;</p>
+<p>&#x9002;&#x7528;&#x4E8E;&#x5927;&#x578B;&#x6570;&#x636E;&#x96C6;&#x5408;&#xFF0C;&#x5C0F;&#x6570;&#x636E;&#x96C6;&#x65F6;&#x6027;&#x80FD;&#x53CD;&#x800C;&#x4F1A;&#x4E0B;&#x964D;&#x3002;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x662F;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x9009;&#x62E9;&#x57FA;&#x51C6;&#x503C;&#xFF0C;&#x5206;&#x4E3A;&#x5927;&#x6570;&#x7EC4;&#x548C;&#x5C0F;&#x6570;&#x7EC4;&#xFF0C;&#x901A;&#x8FC7;&#x9012;&#x5F52;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">quickSort</span>(<span class="hljs-params">arr</span>)</span>{
+  <span class="hljs-keyword">if</span>(arr.length ==<span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> []
+  <span class="hljs-keyword">let</span> great = [];
+  <span class="hljs-keyword">let</span> less = [];
+  <span class="hljs-keyword">let</span> baseLine = arr[<span class="hljs-number">0</span>];
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">1</span>;i&lt;arr.length;i++){
+    <span class="hljs-keyword">if</span>(arr[i] &gt; baseLine){
+      great.push(arr[i])
+    }<span class="hljs-keyword">else</span>{
+      less.push(arr[i])
+    }
+  }
+  <span class="hljs-keyword">return</span> quickSort(great).concat(baseLine,quickSort(less))
+}
+<span class="hljs-comment">//&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(nlogn)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)</span>
+</code></pre>
+<h5 id="17-sort">1.7 sort</h5>
+<p>&#x5728;&#x65E7;&#x7248;V8&#x5F15;&#x64CE;&#x4E2D;&#xFF0C;sort&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x4E3A;&#x5728;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;10&#x4F4D;&#x65F6;&#xFF0C;&#x8C03;&#x7528;&#x7684;&#x662F;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#xFF0C;&#x8D85;&#x8FC7;10&#x4F4D;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x3002;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x662F;&#x4E0D;&#x7A33;&#x5B9A;&#x3002;</p>
+<p>&#x5728;&#x65B0;&#x7248;&#x7684;V8&#x5F15;&#x64CE;&#x4E2D;&#xFF0C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x88AB;&#x820D;&#x5F03;&#xFF0C;&#x91C7;&#x7528;&#x4E86;&#x4E00;&#x79CD;&#x6DF7;&#x5408;&#x6392;&#x5E8F;&#x7684;&#x7B97;&#x6CD5;TimSort&#xFF0C;&#x5728;&#x6570;&#x636E;&#x91CF;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x4E2D;&#x4F7F;&#x7528;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#xFF0C;&#x518D;&#x4F7F;&#x7528;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x5C06;&#x6709;&#x5E8F;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x6392;&#x5E8F;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(nlogn)&#x3002;<a href="https://github.com/v8/v8/blob/master/third_party/v8/builtins/array-sort.tq" target="_blank">&#x6E90;&#x7801;&#x5730;&#x5740;</a></p>
+<p>&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x6B65;&#x9AA4;&#x4E3A;&#xFF1A;</p>
+<p>1.&#x5224;&#x65AD;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF0C;&#x5C0F;&#x4E8E;2&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#xFF0C;&#x4E0D;&#x6392;&#x5E8F;&#x3002;</p>
+<p>2.&#x5F00;&#x59CB;&#x5FAA;&#x73AF;&#x3002;</p>
+<p>3.&#x627E;&#x51FA;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x5B50;&#x6570;&#x7EC4;&#xFF0C;&#x6211;&#x4EEC;&#x79F0;&#x4E4B;&#x4E3A;&#x201C;run&#x201D;&#xFF0C;&#x957F;&#x5EA6;&#x4E3A; currentRunLength &#x3002;</p>
+<p>4.&#x8BA1;&#x7B97;&#x6700;&#x5C0F;&#x5408;&#x5E76;&#x5E8F;&#x5217;&#x957F;&#x5EA6; minRunLength &#xFF08;&#x8FD9;&#x4E2A;&#x503C;&#x4F1A;&#x6839;&#x636E;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x52A8;&#x6001;&#x53D8;&#x5316;&#xFF0C;&#x5728;32~64&#x4E4B;&#x95F4;&#xFF09;&#x3002;</p>
+<p>5.&#x6BD4;&#x8F83; currentRunLength &#x548C; minRunLength &#xFF0C;&#x5982;&#x679C; currentRunLength &gt;= minRunLength &#xFF0C;&#x5426;&#x5219;&#x91C7;&#x7528;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x8865;&#x8DB3;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x81F3; minRunLength &#xFF0C;&#x5C06; run &#x538B;&#x5165;&#x6808; pendingRuns &#x4E2D;&#x3002;</p>
+<p>6.&#x6BCF;&#x6B21;&#x6709;&#x65B0;&#x7684; run &#x88AB;&#x538B;&#x5165; pendingRuns &#x65F6;&#x4FDD;&#x8BC1;&#x6808;&#x5185;&#x4EFB;&#x610F;3&#x4E2A;&#x8FDE;&#x7EED;&#x7684; run&#xFF08;run0, run1, run2&#xFF09;&#x4ECE;&#x4E0B;&#x81F3;&#x4E0A;&#x6EE1;&#x8DB3;run0&gt;run1+run2 &amp;&amp; run1&gt;run2 &#xFF0C;&#x4E0D;&#x6EE1;&#x8DB3;&#x7684;&#x8BDD;&#x8FDB;&#x884C;&#x8C03;&#x6574;&#x76F4;&#x81F3;&#x6EE1;&#x8DB3;&#x3002;</p>
+<p>7.&#x5982;&#x679C;&#x5269;&#x4F59;&#x5B50;&#x6570;&#x7EC4;&#x4E3A;0&#xFF0C;&#x7ED3;&#x675F;&#x5FAA;&#x73AF;&#x3002;</p>
+<p>8.&#x5408;&#x5E76;&#x6808;&#x4E2D;&#x6240;&#x6709; run&#xFF0C;&#x6392;&#x5E8F;&#x7ED3;&#x675F;&#x3002;</p>
+<h4 id="2&#x68C0;&#x7D22;&#x7B97;&#x6CD5;">2.&#x68C0;&#x7D22;&#x7B97;&#x6CD5;</h4>
+<h5 id="21&#x987A;&#x5E8F;&#x67E5;&#x627E;">2.1&#x987A;&#x5E8F;&#x67E5;&#x627E;</h5>
+<p>&#x66B4;&#x529B;&#x67E5;&#x627E;&#xFF0C;&#x6309;&#x7167;&#x5217;&#x8868;&#x987A;&#x5E8F;&#x7EBF;&#x6027;&#x67E5;&#x627E;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">seqSearch</span>(<span class="hljs-params">arr,data</span>)</span>{
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;i&lt;arr.length;i++){
+    <span class="hljs-keyword">if</span>(arr[i] == data){
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    }
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+}
+</code></pre>
+<h5 id="22-&#x4E8C;&#x5206;&#x67E5;&#x627E;">2.2 &#x4E8C;&#x5206;&#x67E5;&#x627E;</h5>
+<p>&#x5982;&#x679C;&#x6570;&#x7EC4;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x5C31;&#x6BD4;&#x987A;&#x5E8F;&#x67E5;&#x627E;&#x66F4;&#x6709;&#x6548;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bindSearch</span>(<span class="hljs-params">arr,data</span>)</span>{
+  <span class="hljs-keyword">let</span> upper = arr.length<span class="hljs-number">-1</span>;
+  <span class="hljs-keyword">let</span> lower = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span>(lower &lt;= upper){
+    <span class="hljs-keyword">let</span> mid = <span class="hljs-built_in">Math</span>.floor((upper+lower)/<span class="hljs-number">2</span>);
+    <span class="hljs-keyword">if</span>(arr[mid] &lt; data){
+      lower = mid + <span class="hljs-number">1</span>
+    }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(arr[mid] &gt; data){
+      upper = mid - <span class="hljs-number">1</span>
+    }<span class="hljs-keyword">else</span>{
+      <span class="hljs-keyword">return</span> mid
+    }
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="数据结构.html" class="navigation navigation-prev " aria-label="Previous page: 数据结构">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="动态贪心.html" class="navigation navigation-next " aria-label="Next page: 动态规划和贪心算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"排序和检索算法","level":"1.6.2","depth":2,"next":{"title":"动态规划和贪心算法","level":"1.6.3","depth":2,"path":"strucAlgo/动态贪心.md","ref":"strucAlgo/动态贪心.md","articles":[]},"previous":{"title":"数据结构","level":"1.6.1","depth":2,"path":"strucAlgo/数据结构.md","ref":"strucAlgo/数据结构.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"strucAlgo/排序检索.md","mtime":"2021-04-02T01:48:42.074Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-02T07:04:14.893Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
