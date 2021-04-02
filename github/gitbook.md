@@ -25,3 +25,7 @@ Gitbook支持输出
 PDF输出：
 
 *$ npm install gitbook -pdf -g*
+
+更新到docs
+
+gitbook build
